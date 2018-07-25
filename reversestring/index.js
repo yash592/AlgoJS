@@ -7,16 +7,36 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 
-function reverse(str) {
-	var split = str.split("") // splits word and pushes it into an array
+const reverseOne = (str) => {
+	let split = str.split("") // splits word and pushes it into an array
 	// console.log(split)
-	var reverse = split.reverse()
-	var reversedWord = reverse.join('');
+	let reverse = split.reverse()
+	let reversedWord = reverse.join('');
 	return reversedWord	 
 
 }
 
-console.log(reverse('Arpit'))
+console.log(reverseOne('BumBum'))
+
+var wordArray = []
+
+function reverseTwo(str) {
+
+	var reversed = "";
+		
+	for (var i = str.length - 1;  i >= 0; i--) {
+		reversed += str[i];
+		
+	}
+
+	return reversed;
+
+}
+
+console.log(reverseTwo('Apple'))
 
 
-module.exports = reverse;
+
+
+
+module.exports = reverseOne;
