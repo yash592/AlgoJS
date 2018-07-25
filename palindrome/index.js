@@ -7,6 +7,20 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+	letLowerCase = str.toLowerCase();
+	console.log(letLowerCase)
+	let reversed = letLowerCase.split('').reverse().join('').toLowerCase();
+	console.log(reversed)
+	
+
+	if(reversed === letLowerCase) {
+		console.log("Yes lad")
+	}
+	else {
+		console.log("No")
+	}
+}
+palindrome('yash');
 
 module.exports = palindrome;
