@@ -6,18 +6,17 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-const wordArray = [];
 
 function reverse(str) {
-	var split = str.split("")
+	var split = str.split("") // splits word and pushes it into an array
 	// console.log(split)
 	var reverse = split.reverse()
-	var final = reverse.join('');
-	console.log(final)	 
+	var reversedWord = reverse.join('');
+	return reversedWord	 
 
 }
 
-reverse('apples')
+console.log(reverse('Arpit'))
 
 
 module.exports = reverse;
