@@ -10,26 +10,39 @@
 
 function maxChar(str) {
 
-	const word = str.split('');
-	var count = 1;
-	
-	for(var i = 0; i < word.length; i++) {
+	let chars = {};
+	let count = 0;
+	let maxChar = '';
 
-		if (word[i] === word[i+1]) {
-			count++;		
-
+	for (let char of str) {
+		if(!chars[char]) {
+			chars[char] = 1;
+		} else {
+			chars[char]++
 		}
-		
-		
+
+		console.log( chars )
 	}
 
-	return count;
+	for (let keys in chars) {
 
+		if(chars[keys] > count) {
+			count = chars[keys];
+			maxChar = keys
+
+		}	
+
+
+	}
+
+	return maxChar;
+
+	
 
 }
 
 
 
-console.log(maxChar("HHHello"))
+console.log(maxChar("Hellllllo"))
 
 module.exports = maxChar;
