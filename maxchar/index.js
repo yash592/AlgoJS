@@ -5,24 +5,31 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-var maxObj = {};
+
 
 
 function maxChar(str) {
 
-	for( let char of str ) {
-		if (!maxObj[char]) {
-			maxObj[char] = 1;
-		}
+	const word = str.split('');
+	var count = 1;
+	
+	for(var i = 0; i < word.length; i++) {
 
-		else {
-			maxObj[char]++;
+		if (word[i] === word[i+1]) {
+			count++;		
+
 		}
+		
+		
 	}
+
+	return count;
+
+
 }
 
-console.log(maxObj)
 
-maxChar("Hello")
+
+console.log(maxChar("HHHello"))
 
 module.exports = maxChar;
