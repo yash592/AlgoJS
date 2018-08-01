@@ -14,6 +14,29 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+
+	const mid = Math.floor((2*n-1)/2);
+
+
+	for(r=0; r<n; r++) {
+		let pyr = '';
+		for(c = 0; c < 2*n-1; c++) {
+			if(c >= mid - r && c <= mid + r ) {
+				pyr += '$'
+			} else {
+				pyr += '.'
+			}
+		}
+
+		console.log(pyr)
+	}
+
+	
+}
+
+pyramid(4)
+// pyramid(3)
+// pyramid(4)
 
 module.exports = pyramid;
